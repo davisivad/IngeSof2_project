@@ -17,7 +17,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/linearLayout">>
+        android:id="@+id/seccion_persona">>
 
         <ImageView
             android:id="@+id/android_pic"
@@ -42,7 +42,6 @@
                 android:layout_marginLeft="50dp"
                 android:gravity="center"
                 android:text="Usuario"
-                android:textColor="black"
                 android:textSize="25dp"
                 android:textStyle="bold" />
 
@@ -53,7 +52,6 @@
                 android:layout_marginLeft="50dp"
                 android:gravity="center"
                 android:text="C.I"
-                android:textColor="black"
                 android:textSize="25dp"
                 android:textStyle="bold" />
 
@@ -64,7 +62,6 @@
                 android:layout_marginLeft="50dp"
                 android:gravity="center"
                 android:text="Email"
-                android:textColor="black"
                 android:textSize="25dp"
                 android:textStyle="bold" />
 

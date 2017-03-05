@@ -28,7 +28,7 @@ public class MyFirstApp extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_first_app);
-        Seccion_Persona = (LinearLayout)findViewById(R.id.name);
+        Seccion_Persona = (LinearLayout)findViewById(R.id.seccion_persona);
 
     }
 
