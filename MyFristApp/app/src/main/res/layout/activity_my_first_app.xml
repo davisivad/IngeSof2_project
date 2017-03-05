@@ -14,10 +14,10 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="1"
+        android:id="@+id/section_persona"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/seccion_persona">>
+        android:layout_alignParentStart="true">>
 
         <ImageView
             android:id="@+id/android_pic"
@@ -27,11 +27,9 @@
             android:src="@drawable/photo" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="305dp"
             android:layout_height="300dp"
-            android:layout_marginLeft="28dp"
             android:layout_marginTop="20dp"
-            android:layout_weight="0.70"
             android:orientation="vertical"
             android:weightSum="1">
 
@@ -39,19 +37,8 @@
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
                 android:gravity="center"
                 android:text="Usuario"
-                android:textSize="25dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/cedula"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:gravity="center"
-                android:text="C.I"
                 android:textSize="25dp"
                 android:textStyle="bold" />
 
@@ -59,20 +46,18 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
                 android:gravity="center"
                 android:text="Email"
-                android:textSize="25dp"
+                android:textSize="12dp"
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/button_logout"
-                android:layout_width="161dp"
+                android:id="@+id/button_LogOut"
+                android:layout_width="211dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/linearLayout"
                 android:layout_centerHorizontal="true"
-                android:layout_marginLeft="50dp"
                 android:layout_marginTop="150dp"
+                android:layout_marginLeft="50dp"
                 android:background="@android:drawable/title_bar"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:text="Log Out"
@@ -81,12 +66,12 @@
         </LinearLayout>
     </LinearLayout>
     <com.google.android.gms.common.SignInButton
-        android:layout_below="@+id/linearLayout"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="27dp"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginLeft="50dp"
-        >
+        android:id="@+id/button_LogIn"
+        android:layout_below="@+id/section_persona"
+        android:layout_centerHorizontal="true">
 
     </com.google.android.gms.common.SignInButton>
 
