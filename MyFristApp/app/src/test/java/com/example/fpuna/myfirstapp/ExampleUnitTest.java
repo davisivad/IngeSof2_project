@@ -1,4 +1,4 @@
-package com.example.fpuna.myfristapp;
+package com.example.fpuna.myfirstapp;
 
 import org.junit.Test;
 
