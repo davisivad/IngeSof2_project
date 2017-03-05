@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "396464939090",
+    "project_id": "myfirstapp-160519"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396464939090:android:bd209967611af543",
+        "android_client_info": {
+          "package_name": "com.example.fpuna.myfirstapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396464939090-foaha7pdcps7sr2f8n4rhjd07bljbk5c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fpuna.myfirstapp",
+            "certificate_hash": "1922df836919804ca649329265e8a2627a3bcd50"
+          }
+        },
+        {
+          "client_id": "396464939090-k5oq3s9df9mfa5bju8akulnf7ckmmc97.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtBvmC5iaABaN4OoReEmx5v1DDkkAI9HI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
