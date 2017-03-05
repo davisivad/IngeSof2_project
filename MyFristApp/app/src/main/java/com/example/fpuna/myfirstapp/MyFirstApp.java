@@ -48,12 +48,10 @@ public class MyFirstApp extends AppCompatActivity implements View.OnClickListene
         GoogleSignInOptions signInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         googleApiCliente = new GoogleApiClient.Builder(this).enableAutoManage(this,this).addApi(Auth.GOOGLE_SIGN_IN_API,signInOptions).build();
 
-
     }
 
     @Override
     public void onClick(View v) {
-
         switch (v.getId()){
             case R.id.button_LogIn:
                 signIn();
@@ -75,8 +73,6 @@ public class MyFirstApp extends AppCompatActivity implements View.OnClickListene
     private void signIn(){
         Intent intent = Auth.GoogleSignInApi.getSignInIntent(googleApiCliente);
         startActivityForResult(intent,REQ_CODE);
-
-
     }
     private void signOut()
     {
@@ -86,7 +82,6 @@ public class MyFirstApp extends AppCompatActivity implements View.OnClickListene
                 updateUI(false);
             }
         });
-
     }
     private void handleResult(GoogleSignInResult result)
     {
@@ -105,9 +100,6 @@ public class MyFirstApp extends AppCompatActivity implements View.OnClickListene
         {
             updateUI(false);
         }
-
-
-
     }
 
     private void updateUI(boolean isLogin)
@@ -122,13 +114,11 @@ public class MyFirstApp extends AppCompatActivity implements View.OnClickListene
             Seccion_Persona.setVisibility(View.GONE);
             SignIn.setVisibility(View.VISIBLE);
         }
-
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
         if(requestCode == REQ_CODE)
         {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
