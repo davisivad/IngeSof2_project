@@ -51,6 +51,26 @@ public class MyFirstApp extends AppCompatActivity implements View.OnClickListene
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_usuario, menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case android.R.id.home:
+                this.finish();
+                return true;
+            case R.id.listar:
+
+
+        }
+    }
+
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.button_LogIn:
