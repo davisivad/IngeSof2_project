@@ -15,9 +15,12 @@
         android:orientation="horizontal"
         android:weightSum="1"
         android:id="@+id/section_persona"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="176dp">>
 
         <ImageView
             android:id="@+id/android_pic"
@@ -32,24 +35,6 @@
             android:layout_marginTop="20dp"
             android:orientation="vertical"
             android:weightSum="1">
-
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Usuario"
-                android:textSize="25dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Email"
-                android:textSize="12dp"
-                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button_LogOut"
