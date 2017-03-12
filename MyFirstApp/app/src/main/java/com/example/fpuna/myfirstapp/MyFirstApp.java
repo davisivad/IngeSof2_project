@@ -25,6 +25,7 @@ public class MyFirstApp extends AppCompatActivity implements View.OnClickListene
 
     private LinearLayout Seccion_Persona;
     private Button SignOut;
+    private Button Next;
     private SignInButton SignIn;
     private TextView Name,Email;
     private ImageView Android_Pic;
@@ -39,36 +40,18 @@ public class MyFirstApp extends AppCompatActivity implements View.OnClickListene
         Seccion_Persona = (LinearLayout)findViewById(R.id.section_persona);
         SignOut = (Button)findViewById(R.id.button_LogOut);
         SignIn = (SignInButton) findViewById(R.id.button_LogIn);
+        Next = (Button)findViewById(R.id.button_Next);
         Name = (TextView)findViewById(R.id.name);
         Email = (TextView)findViewById(R.id.email);
         Android_Pic = (ImageView)findViewById(R.id.android_pic);
         SignIn.setOnClickListener(this);
         SignOut.setOnClickListener(this);
+        Next.setOnClickListener(this);
         Seccion_Persona.setVisibility(View.GONE);
         GoogleSignInOptions signInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         googleApiCliente = new GoogleApiClient.Builder(this).enableAutoManage(this,this).addApi(Auth.GOOGLE_SIGN_IN_API,signInOptions).build();
 
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu_usuario, menu);
-        return true;
-    }
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        switch (item.getItemId()){
-            case android.R.id.home:
-                this.finish();
-                return true;
-            case R.id.listar:
-
-
-        }
-    }
-
 
     @Override
     public void onClick(View v) {
@@ -79,10 +62,15 @@ public class MyFirstApp extends AppCompatActivity implements View.OnClickListene
             case R.id.button_LogOut:
                 signOut();
                 break;
-
+            case R.id.button_Next:
+                buttonNext();
+                break;
         }
+    }
 
-
+    private void buttonNext() {
+        Intent next = new Intent(MyFirstApp.this, CargaDatos.class);
+        startActivity(next);
     }
 
     @Override

@@ -15,12 +15,9 @@
         android:orientation="horizontal"
         android:weightSum="1"
         android:id="@+id/section_persona"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="176dp">>
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">>
 
         <ImageView
             android:id="@+id/android_pic"
@@ -38,16 +35,16 @@
 
             <TextView
                 android:id="@+id/name"
-                android:layout_width="match_parent"
+                android:layout_width="264dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Usuario"
-                android:textSize="25dp"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/email"
-                android:layout_width="match_parent"
+                android:layout_width="266dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Email"
@@ -57,15 +54,31 @@
             <Button
                 android:id="@+id/button_LogOut"
                 android:layout_width="211dp"
-                android:layout_height="wrap_content"
+                android:layout_height="34dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="150dp"
-                android:layout_marginLeft="50dp"
+                android:layout_marginTop="200dp"
+                android:layout_marginLeft="25dp"
                 android:background="@android:drawable/title_bar"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:text="Log Out"
                 android:textSize="25dp"
                 android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_Next"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="211dp"
+                android:layout_height="34dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="-90dp"
+                android:background="@android:drawable/title_bar"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="NEXT"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
         </LinearLayout>
     </LinearLayout>
     <com.google.android.gms.common.SignInButton
