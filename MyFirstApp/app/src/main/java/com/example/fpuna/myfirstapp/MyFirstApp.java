@@ -69,7 +69,7 @@ public class MyFirstApp extends AppCompatActivity implements View.OnClickListene
     }
 
     private void buttonNext() {
-        Intent next = new Intent(MyFirstApp.this, CargaDatos.class);
+        Intent next = new Intent(MyFirstApp.this, CargarDatos.class);
         startActivity(next);
     }
 
