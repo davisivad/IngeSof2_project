@@ -1,65 +1,67 @@
 package com.example.fpuna.myfirstapp;
 
+import android.app.Activity;
 import android.content.ContentValues;
+import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.Toast;
 
-public class CargarDatos extends AppCompatActivity implements View.OnClickListener{
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
 
-    private Button add,finish;
-    private EditText etId,etName,etDate,etSex;
+public class CargarDatos extends Activity {
 
+    EditText ET_Name, ET_Date, ET_Sex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cargar_datos);
-
-        add = (Button)findViewById(R.id.button_add);
-        add.setOnClickListener(this);
-        finish = (Button)findViewById(R.id.button_finish);
-        finish.setOnClickListener(this);
-
-
-        etId = (EditText)findViewById(R.id.text_id);
-        etName = (EditText)findViewById(R.id.text_name);
-        etDate = (EditText)findViewById(R.id.text_date);
-        etSex = (EditText)findViewById(R.id.text_sex);
+        ET_Name = (EditText) findViewById(R.id.ET_Name);
+        ET_Date = (EditText) findViewById(R.id.ET_Date);
+        ET_Sex = (EditText) findViewById(R.id.ET_Sex);
 
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.button_add:
-                add();
-                break;
-            case R.id.button_finish:
-                end();
-                break;
+    public void GuardarDatos(View view) {
+        String name = ET_Name.getText().toString();
+        String date = ET_Date.getText().toString();
+        String sex = ET_Sex.getText().toString();
+
+        BaseHelper baseHelper = new BaseHelper(this, "MiBasedeDatos", null, 1);
+        SQLiteDatabase db = baseHelper.getWritableDatabase();
+
+        if (db != null) {
+            try{
+                ContentValues registronuevo = new ContentValues();
+                registronuevo.put("Name", name);
+                registronuevo.put("Date", date);
+                registronuevo.put("Sex", sex);
+                long i = db.insert("Usuario", null, registronuevo);
+                if (i > 0) {
+                    Toast.makeText(this, "Registro Insertado", Toast.LENGTH_SHORT).show();
+                }
+            }catch(Exception E){
+
+            }
+
         }
     }
 
-    private void end() {
-        finish();
-    }
-
-    private void add() {
-        final FeedReaderDbHelper mDbHelper = new FeedReaderDbHelper(getApplicationContext());
-        SQLiteDatabase db = mDbHelper.getWritableDatabase();
-        ContentValues valores = new ContentValues();
-        valores.put(FeedReaderDbHelper.FeedEntry.COLUMN_NAME,etName.getText().toString());
-        valores.put(FeedReaderDbHelper.FeedEntry.COLUMN_DATE,etDate.getText().toString());
-        valores.put(FeedReaderDbHelper.FeedEntry.COLUMN_SEX,etSex.getText().toString());
-
-        Long IdGuardado = db.insert(FeedReaderDbHelper.FeedEntry.TABLE_NAME, null, valores);
-        Toast.makeText(getApplicationContext(),"Se guardo el dato con ID" + IdGuardado, Toast.LENGTH_LONG).show();
-
-
+    public void MostrarDatos(View view){
+        Intent intent = new Intent(CargarDatos.this, Mostrar.class);
+        startActivity(intent);
     }
 }
+

@@ -17,7 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CargarDatos"></activity>
+        <activity android:name=".CargarDatos" />
+        <activity android:name=".Mostrar"></activity>
     </application>
 
 </manifest>
