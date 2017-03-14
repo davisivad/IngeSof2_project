@@ -1,6 +1,7 @@
 package com.example.fpuna.myfirstapp;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
@@ -21,7 +22,7 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "MiBasedeDatos.db";
 
-    public FeedReaderDbHelper(Context context) {
+    public FeedReaderDbHelper(CargarDatos mostrarDatos, String s, Context context, int i) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
     private static final String TEXT_TYPE = " TEXT";
@@ -48,5 +49,10 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
     }
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         onUpgrade(db, oldVersion, newVersion);
+    }
+    public Cursor getShow(){
+        String columnas[]={FeedEntry._ID,FeedEntry.COLUMN_NAME,FeedEntry.COLUMN_DATE,FeedEntry.COLUMN_SEX};
+        Cursor c = this.getReadableDatabase().query(FeedEntry.TABLE_NAME, columnas, null, null, null, null,null);
+        return c;
     }
 }
