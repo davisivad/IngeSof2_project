@@ -55,13 +55,17 @@ public class CargarDatos extends Activity {
             }catch(Exception E){
 
             }
-
         }
     }
 
     public void MostrarDatos(View view){
         Intent intent = new Intent(CargarDatos.this, Mostrar.class);
         startActivity(intent);
+    }
+
+    public void Terminar(View view){
+        finish();
+        System.exit(0);
     }
 }
 

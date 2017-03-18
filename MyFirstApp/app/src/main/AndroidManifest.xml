@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CargarDatos" />
-        <activity android:name=".Mostrar"></activity>
+        <activity android:name=".Mostrar" />
+        <activity android:name=".Detalles"></activity>
     </application>
 
 </manifest>

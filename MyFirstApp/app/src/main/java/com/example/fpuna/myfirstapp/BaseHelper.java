@@ -12,7 +12,9 @@ import android.provider.BaseColumns;
 
 public class BaseHelper extends SQLiteOpenHelper {
 
-    String tabla = "CREATE TABLE IF NOT EXISTS Usuario(Id INTEGER PRIMARY KEY AUTOINCREMENT, Name Text, Date Text, Sex Text)";
+
+    String tablaVacuna = "CREATE TABLE IF NOT EXISTS Vacuna(Id INTEGER PRIMARY KEY AUTOINCREMENT, Name Text, Edad Text, Dosis Text, Fecha Date, Lote Text, Responsable Text)";
+    String tabla = "CREATE TABLE IF NOT EXISTS Usuario(Id INTEGER PRIMARY KEY AUTOINCREMENT, Name Text, Date Text, Sex Text, Vacuna tablaVacuna)";
 
     public BaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version){
         super(context, name, factory, version);
@@ -21,6 +23,9 @@ public class BaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(tabla);
+        db.execSQL("Insert into Vacuna values('Tuberculosis, 1, 10, 12/02/2001, asd, Doctor Fulano");
+        db.execSQL("Insert into Vacuna values('RotaVirus,1, 10, 12/02/2001, asd, Doctor Fulano");
+        db.execSQL("Insert into Vacuna values('PCV 10 Valente,1, 10, 12/02/2001, asd, Doctor Fulano");
     }
 
     @Override
