@@ -17,9 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CargarDatos" />
-        <activity android:name=".Mostrar" />
-        <activity android:name=".Detalles"></activity>
+        <activity android:name=".Menus"></activity>
     </application>
 
 </manifest>

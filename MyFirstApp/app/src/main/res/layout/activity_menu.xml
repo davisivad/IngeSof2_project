@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fpuna.myfirstapp.Menus">
+
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/textView"
+            android:text="Selecciona un Hij@"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+
+        <Spinner
+            android:id="@+id/SpinnerHijos"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Nombre y Apellido"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/Nombreapellido"
+            android:layout_below="@+id/SpinnerHijos"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Fecha de Nacimiento"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/Fecha_nacimiento"
+            android:layout_below="@+id/Nombreapellido"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Sexo"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/Sexo"
+            android:layout_below="@+id/Fecha_nacimiento" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

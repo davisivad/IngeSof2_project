@@ -1,0 +1,152 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=6240, tid=0x0000000000001d34
+#
+# JRE version:  (8.0_112-b06) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.112-b06 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000100d800):  JavaThread "Unknown thread" [_thread_in_vm, id=7476, stack(0x00000000027d0000,0x00000000028d0000)]
+
+Stack: [0x00000000027d0000,0x00000000028d0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x000000000100d800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=7476, stack(0x00000000027d0000,0x00000000028d0000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 38400K, used 665K [0x00000000eab00000, 0x00000000ed580000, 0x0000000100000000)
+  eden space 33280K, 2% used [0x00000000eab00000,0x00000000eaba6670,0x00000000ecb80000)
+  from space 5120K, 0% used [0x00000000ed080000,0x00000000ed080000,0x00000000ed580000)
+  to   space 5120K, 0% used [0x00000000ecb80000,0x00000000ecb80000,0x00000000ed080000)
+ ParOldGen       total 87552K, used 0K [0x00000000c0000000, 0x00000000c5580000, 0x00000000eab00000)
+  object space 87552K, 0% used [0x00000000c0000000,0x00000000c0000000,0x00000000c5580000)
+ Metaspace       used 772K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 73K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011d90000,0x0000000011fa0000] byte_map_base: 0x0000000011790000
+
+Marking Bits: (ParMarkBitMap*) 0x00000000546318f0
+ Begin Bits: [0x0000000012900000, 0x0000000013900000)
+ End Bits:   [0x0000000013900000, 0x0000000014900000)
+
+Polling page: 0x0000000000ff0000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x00000000029d0000, 0x0000000002c40000, 0x00000000119d0000]
+ total_blobs=57 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.096 loading class java/lang/Short
+Event: 0.096 loading class java/lang/Short done
+Event: 0.096 loading class java/lang/Integer
+Event: 0.097 loading class java/lang/Integer done
+Event: 0.097 loading class java/lang/Long
+Event: 0.097 loading class java/lang/Long done
+Event: 0.099 loading class java/lang/NullPointerException
+Event: 0.099 loading class java/lang/NullPointerException done
+Event: 0.099 loading class java/lang/ArithmeticException
+Event: 0.100 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff74eb20000 - 0x00007ff74eb51000 	C:\Program Files\Android\Android Studio\jre\bin\java.exe
+0x00007ff89a3e0000 - 0x00007ff89a58c000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff89a2a0000 - 0x00007ff89a3de000 	C:\Windows\system32\KERNEL32.DLL
+0x00007ff897940000 - 0x00007ff897a55000 	C:\Windows\system32\KERNELBASE.dll
+0x00007ff8960d0000 - 0x00007ff89615e000 	C:\Windows\system32\apphelp.dll
+0x00007ff897e40000 - 0x00007ff897eea000 	C:\Windows\system32\ADVAPI32.dll
+0x00007ff898610000 - 0x00007ff898787000 	C:\Windows\system32\USER32.dll
+0x00007ff895210000 - 0x00007ff89548b000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.17415_none_6240486fecbd8abb\COMCTL32.dll
+0x00007ff899d80000 - 0x00007ff899e2a000 	C:\Windows\system32\msvcrt.dll
+0x00007ff8980a0000 - 0x00007ff8980f9000 	C:\Windows\SYSTEM32\sechost.dll
+0x00007ff898110000 - 0x00007ff898251000 	C:\Windows\system32\RPCRT4.dll
+0x00007ff898440000 - 0x00007ff898591000 	C:\Windows\system32\GDI32.dll
+0x00007ff89a060000 - 0x00007ff89a096000 	C:\Windows\system32\IMM32.DLL
+0x00007ff899e40000 - 0x00007ff899f93000 	C:\Windows\system32\MSCTF.dll
+0x0000000054870000 - 0x0000000054942000 	C:\Program Files\Android\Android Studio\jre\jre\bin\msvcr100.dll
+0x0000000053e70000 - 0x00000000546ac000 	C:\Program Files\Android\Android Studio\jre\jre\bin\server\jvm.dll
+0x00007ff88d110000 - 0x00007ff88d119000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ff892660000 - 0x00007ff892682000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff88d0f0000 - 0x00007ff88d0fa000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff89a290000 - 0x00007ff89a297000 	C:\Windows\system32\PSAPI.DLL
+0x00007ff899cb0000 - 0x00007ff899d0a000 	C:\Windows\system32\WS2_32.dll
+0x00007ff892190000 - 0x00007ff8921ba000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ff899d10000 - 0x00007ff899d19000 	C:\Windows\system32\NSI.dll
+0x00007ff897840000 - 0x00007ff89788f000 	C:\Windows\SYSTEM32\cfgmgr32.dll
+0x00007ff896350000 - 0x00007ff896378000 	C:\Windows\SYSTEM32\DEVOBJ.dll
+0x00007ff87c280000 - 0x00007ff87c28f000 	C:\Program Files\Android\Android Studio\jre\jre\bin\verify.dll
+0x00007ff878da0000 - 0x00007ff878dc9000 	C:\Program Files\Android\Android Studio\jre\jre\bin\java.dll
+0x00007ff878900000 - 0x00007ff878916000 	C:\Program Files\Android\Android Studio\jre\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true -Xmx1024M -Dfile.encoding=windows-1252 -Duser.country=ES -Duser.language=es -Duser.variant 
+java_command: com.android.dx.command.Main --dex --force-jumbo --num-threads=4 --multi-dex --output D:\IngeSof2_project\MyFirstApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0 D:\IngeSof2_project\MyFirstApp\app\build\intermediates\transforms\instantRunSlicer\debug\folders\1\5\slice_0
+java_class_path (initial): C:\Users\Hiroshi\AppData\Local\Android\sdk\build-tools\25.0.2\lib\dx.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_121
+PATH=C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Git\cmd;C:\Program Files (x86)\pgmodeler;C:\Users\Hiroshi\AppData\Local\Programs\Python\Python35;C:\Users\Hiroshi\AppData\Roaming\Dashlane\4.5.0.13208\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components
+USERNAME=Hiroshi
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8.1 , 64 bit Build 9600 (6.3.9600.17415)
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 8319000k(1475600k free), swap 8319000k(5696k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.112-b06) for windows-amd64 JRE (1.8.0_112-release-b06), built on Dec  8 2016 00:54:26 by "builder" with MS VC++ 10.0 (VS2010)
+
+time: Wed Apr 05 23:50:19 2017
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
